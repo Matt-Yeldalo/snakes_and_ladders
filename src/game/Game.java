@@ -1,9 +1,6 @@
 package game;
 
-import game.entity.DisplayableEntity;
-import game.entity.EntityManager;
-import game.entity.Ladder;
-import game.entity.Player;
+import game.entity.*;
 import game.state.GameState;
 import game.state.Rolling;
 
@@ -19,7 +16,8 @@ public class Game {
     grid = new Grid(5, 5);
     entityManager = new EntityManager(
       new Player(Grid.START.x, Grid.START.y, new Color(50, 120, 200)),
-      new Ladder(grid.getCellById(16), grid.getCellById(53))
+      new Ladder(grid.getCellById(16), grid.getCellById(53)),
+      new Snake(grid.getCellById(30), grid.getCellById(71))
 
     );
   }

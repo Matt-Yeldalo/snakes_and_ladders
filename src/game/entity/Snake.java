@@ -8,13 +8,9 @@ public class Snake implements DisplayableEntity{
 
   Point head;
   Point tail;
-  public Snake(){
-
-    generateSnakes();
-  }
-
-  private void generateSnakes() {
-
+  public Snake(Cell head, Cell tail){
+    this.head = new Point(head.x, head.y);
+    this.tail = new Point(tail.x, tail.y);
   }
 
   @Override

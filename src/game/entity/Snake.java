@@ -15,7 +15,7 @@ public class Snake implements DisplayableEntity{
 
   @Override
   public void display(Graphics g) {
-
+    g.drawLine(tail.x, tail.y, head.x, head.y);
   }
 
   @Override
